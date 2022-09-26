@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multimedia HTML 5</title>
+</head>
+<style>
+h1 {
+  text-align: center;
+  color:cornflowerblue;
+}
+body {
+  background-color:bisque;
+}
+audio {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<body>
+	<h1>Audio HTML</h1>
+	<p>
+	<div class="center">
+	<button onclick="durationAud()" type="button">Durasi</button>
+	<button onclick="playAud()" type="button">Putar Audio</button>
+	<button onclick="pauseAud()" type="button">Jeda Audio</button>
+	<button onclick="muteAud()" type="button">Mute Audio</button>
+	<button onclick="checkMute()" type="button">Cek Status Mute</button>
+	<audio id="myAudio" controls>
+		<source src="media/platinumdisco.mp3" type="audio/mp3">
+	</audio>
+
+	</div>
+	</p>
+	
+</body>
+
+<script>
+var aud = document.getElementById("myAudio");
+function durationAud() { 
+	alert(aud.duration);
+}
+function playAud() {
+    aud.play();
+	aud.loop = true;
+}
+function pauseAud() {
+    aud.pause();
+} 
+function muteAud() {
+    aud.muted = true;
+} 
+function checkMute() { 
+  alert(aud.muted);
+} 
+</script>
+
+
+</html> 

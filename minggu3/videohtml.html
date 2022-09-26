@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multimedia HTML 5</title>
+</head>
+<style>
+h1 {
+  text-align: center;
+  color:cornflowerblue;
+}
+body {
+  background-color:bisque;
+}
+video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<body>
+	<h1>Video HTML</h1>
+	<p>
+
+	<div class="center">
+	<button onclick="durationVid()" type="button">Durasi</button>
+	<button onclick="playVid()" type="button">Putar Video</button>
+	<button onclick="pauseVid()" type="button">Jeda Video</button>
+	<button onclick="enableCon()" type="button">Nyalakan Kontrol</button>
+	<button onclick="disableCon()" type="button">Matikan Kontrol</button>
+	
+
+	<video width="560" id="myVideo">
+		<source src="media/movie.mp4" type="video/mp4">
+	</video>
+
+	
+	<button onclick="makeBig()" type="button">Besar</button>
+  	<button onclick="makeNormal()" type="button">Sedang</button>
+	<button onclick="makeSmall()" type="button">Kecil</button>
+	</div>
+	</p>
+	
+</body>
+
+<script>
+var vid = document.getElementById("myVideo");
+function durationVid() { 
+	alert(vid.duration);
+}
+
+function playVid() {
+    vid.play();
+	vid.loop = true;
+}
+
+function pauseVid() {
+    vid.pause();
+} 
+
+function enableCon() {
+    vid.controls = true;
+	vid.load() ;
+}
+
+function disableCon() {
+    vid.controls = false;
+	vid.load() ;
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 560; 
+}
+function makeBig() { 
+    myVideo.width = 680; 
+} 
+
+</script>
+
+
+</html> 
