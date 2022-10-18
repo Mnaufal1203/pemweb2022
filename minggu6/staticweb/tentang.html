@@ -1,42 +1,108 @@
 <!DOCTYPE html> 
 <html lang="en"> 
  
-<head> 
-    <meta charset="UTF-8"> 
+<head>
+    <style>
+        img 
+        {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        </style> 
+    <meta charset="UTF-8">
+    <meta name="description" content="About Me">
+    <meta name="author" content="Muhammad Naufal Abdulmajid"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Personal Website</title> 
+    <title>About Me</title> 
+    <link rel="icon" type="image/x-icon" href="Media/favicons/profile.ico">
 </head> 
-<body> 
+<body>
     <nav> 
         <a href="index.html">Home</a> | 
-        <a href="cv-name.pdf">Download CV</a> | 
+        <a href="krs.html">Schedule</a>| 
         <a href="kontak.html">Contact</a> | 
-        <a href="tentang.html">About me</a> 
+        <a href="tentang.html">About me</a> |
+        <a href="hobi.html">My Hobbies</a> |
     </nav> 
-    <hr /> 
-    <article> 
-        <h1>Tentang Saya </h1> 
-        <p> 
-            Hi, saya adalah web developer. 
-            Saat ini sedang belajar HTML. 
-        </p> 
-        <p> 
-            Saya masih baru dalam web development, karena itu 
-            saya tidak akan pernah berhenti belajar. 
-        </p> 
-        <p> 
-            Saya ingin menguasai bahasa HTML, CSS, dan Javascript. 
-            Simak video lengkap tentang saya. 
-        </p> 
-        <p> 
-            <video controls> 
-                <source src="video/movie.mp4" type="video/mp4"/> 
-            </video> 
-        </p> 
-    </article> 
+
     <hr> 
+    
+    <header style="text-align: center;"> 
+        <h1>Tentang Saya</h1>   
+    </header>
+
+    <article> 
+        <figure>
+            <img src="Media/images/naufal.jpg" alt="Foto" width="150" height="200"/> 
+            <figcaption style="text-align: center;">Foto Saya</figcaption> 
+        </figure> 
+    </article>
+
+    <hr>
+
+    <details>
+    <summary>Biodata Saya</summary>
+        <article> 
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>: Muhammad Naufal Adulmajid</td>
+                </tr>
+                <tr>
+                    <td>NIM</td>
+                    <td>: A11.2022.14727</td>
+                </tr>
+                <tr>
+                    <td>Tempat, Tanggal Lahir</td>
+                    <td>: Jepara, 12 Maret 2004</td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>: Jl. Kyai Saleh No.62, Mugassari, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50243</td>
+                </tr>
+                <tr>
+                    <td>Kewarganearaan</td>
+                    <td>: WNI</td>
+                </tr>
+                <tr>
+                    <td>Golongan Darah</td>
+                    <td>: AB</td>
+                </tr>
+                <tr>
+                    <td>Agama</td>
+                    <td>: Islam</td>
+                </tr>
+            </table>
+        </article> 
+    </details>
+
+    <hr> 
+
+    <details>
+        <summary>Riwayat Pendidikan Saya</summary>
+            <article> 
+                <table>
+                    <tr>
+                        <td>2011 - 2016</td>
+                        <td>: SDN 1 Panggang Jepara</td>
+                    </tr>
+                    <tr>
+                        <td>2016 - 2019</td>
+                        <td>: SMP Negeri 2 Jepara</td>
+                    </tr>
+                    <tr>
+                        <td>2019 - 2022</td>
+                        <td>: SMA Negeri 1 Jepara</td>
+                    </tr>
+                </table>
+            </article> 
+        </details>
+
+    <hr>
+
     <footer style="text-align: center;"> 
-        <p>Copyright &copy; 2020 namaku.</p> 
+        <p>Copyright &copy; 2022 Muhammad Naufal Abdulmajid.</p> 
     </footer> 
 </body> 
 </html> 
