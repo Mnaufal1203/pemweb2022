@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Selector Universal CSS</title> 
+  <style type="text/css"> 
+    * {border: 1px solid grey;}
+    .pink { 
+        color: white; 
+        background: pink; 
+        padding: 5px; 
+    }
+    .orange {
+        color: white; 
+        background: orange; 
+        padding: 5px;  
+    }
+   input [type=text] {
+    background: none;
+    color: cyan;
+    padding: 10px;
+    border: 1px solid cyan;
+   }
+    #header {
+        background: cyan; 
+        color: white; 
+        height: 100px; 
+        padding: 50px; 
+        text-align: center;
+    }
+  </style> 
+</head> 
+<body> 
+    <header id="header">
+        <h1>Selamat Datang di Website Saya</h1>
+    </header>
+    <h2>Ini judul artikel</h2>
+    <p style="color:maroon">Ini adalah paragraf yang memuat isi artikel. 
+    Paragraf ini hanya untuk percobaan saja. Percobaan untuk mendemokan 
+    <i class="pink">internal css</i>. Seperti namanya, <i class="orange">inline CSS</i> adalah kode CSS yang 
+    ditulis langsung dalam file HTML.</p> 
+    <input type="text" placeholder="ketik sesuatu..." />
+  </body> 
+  </html> 
