@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+    .login-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        margin: auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+    }
+
+    .login-form h2 {
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid silver;
+    }
+
+    .login-form label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555555;
+        background-color: #ffffff;
+        background-image: none;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        margin-bottom: 10px;
+    }
+
+    .login-form button {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #ffffff;
+        background-color: #3498db;
+        border-color: #3498db;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 37%
+    }
+    </style>
+</head>
+<body>
+    <article>
+        <form class="login-form" action="/login" method="post">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </article>
+    <footer> 
+        <p>Copyright <a href="../References/pustaka.html">&copy;</a> 2022 Muhammad Naufal Abdulmajid.</p> 
+    </footer> 
+</body>
+<script>
+    // Get the form element
+	const form = document.querySelector('.login-form');
+
+// Add an event listener to the form's submit event
+    form.addEventListener('submit', (event) => {
+    // Prevent the form from being submitted
+    event.preventDefault();
+
+    // Get the inputted username and password
+    const username = form.elements.username.value;
+    const password = form.elements.password.value;
+
+
+    if (username === 'admin' && password === 'password') {
+        window.location.href = '../Admin/adminindex.html';
+    } else if (username === 'mhs' && password === 'password') {
+        window.location.href = '../Mahasiswa/mhsindex.html';
+    } else if (username === 'warung' && password === 'password') {
+        window.location.href = '../Warung/warungindex.html';
+    } else {
+        alert('Invalid username or password');
+    }
+});
+</script>
+</html>
